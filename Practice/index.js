@@ -1,7 +1,16 @@
 let city
 let country
 function get() {
-    city = document.getElementById('city').value
+    city = document.getElementById('search').value;
+    fetch(`https://api.weatherapi.com/v1/current.json?key=f81d0f8072c84e4cb3553800262601&q=${city}`).then(function (response1) {
+        return response1.json();
+    }).then(function (response2) {
+        country = response2.location.country
+        document.getElementById('country').value = country
+    }).catch(function (err) {
+        console.log('error1', err);
+    });
+
     country = document.getElementById('country').value
     fetch(`https://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=1`).then(function (res1) {
         return res1.json()
