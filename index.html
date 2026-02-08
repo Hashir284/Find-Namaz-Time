@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaz Time App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Namaz Time App</h1>
+    <form onsubmit="get(); return false">
+        <div>
+        <input type="text" placeholder="Enter the city" id="search">
+        <button type="submit">Get Weather</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Country" disabled id="country">
+        </div>
+    </form>
+
+    <div id="Namaztime">
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
